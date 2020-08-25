@@ -30,3 +30,7 @@ The steps taken, overall, are:
 **The average precision is highest at top 3 and goes down as the threshold increases - we're indeed recommeding better Leads at the beggining of the list, mainly for the top 3, 5 and 10 recommendations!**  
 
 `MAP@3: 1.0, MAP@5: 0.8, MAP@10: 0.569048, MAP@25: 0.40315, MAP@50: 0.348891, MAP@100: 0.333344 MAP@500: 0.250661, MAP@1000: 0.39807`  
+  
+___
+#### [Youtube video with high level explanation - PTBR](https://www.youtube.com/watch?v=mPy3HNEKsns&feature=youtu.be)
+___
