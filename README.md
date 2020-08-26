@@ -1,5 +1,5 @@
 # Recommender-System-Codenation-Project  
-### See the whole process and notes in the [Main Notebook](https://github.com/Key0412/Recommender-System-Codenation-Project/blob/master/main.ipynb)!
+### See the whole process, analysis and notes in the [Projects' GitHub Page](https://key0412.github.io/Recommender-System-Codenation-Project/) or in the [Main Notebook](https://github.com/Key0412/Recommender-System-Codenation-Project/blob/master/main.ipynb)!
 
 ### <a name="objective">1 Objective</a>
 
