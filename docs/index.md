@@ -47,7 +47,9 @@ ___
 
 ### <a name="objective" id="11">1.1 Objective</a>
 
-This project's objective is to provide an automated service that recommends new business leads to a user given his current clients portfolio.
+This project's objective is to provide an automated service that recommends new business leads to a user given his current clients portfolio. A high level vide explanation of the analysis in portuguese is available in youtube, link below.
+
+[![Recommender System to Generate Leads based on Clients' Portfolio video](video_thumbnail.png)](https://www.youtube.com/watch?v=mPy3HNEKsns&feature=youtu.be "Recommender System to Generate Leads based on Clients' Portfolio video")
 
 ### <a name="requirements">1.2 Technical Requirements</a>
 

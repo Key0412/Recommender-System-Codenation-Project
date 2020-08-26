@@ -33,4 +33,5 @@ The steps taken, overall, are:
   
 ___
 #### [Youtube video with high level explanation - PTBR](https://www.youtube.com/watch?v=mPy3HNEKsns&feature=youtu.be)
+[![Recommender System to Generate Leads based on Clients' Portfolio video](docs/video_thumbnail.png)](https://www.youtube.com/watch?v=mPy3HNEKsns&feature=youtu.be "Recommender System to Generate Leads based on Clients' Portfolio video")
 ___
