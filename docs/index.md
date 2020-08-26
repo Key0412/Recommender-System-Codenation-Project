@@ -1,5 +1,6 @@
 # AceleraDev Data Science Project - Recommender System to Generate Leads based on Clients' Portfolio
-___
+  
+___  
 
 ## <a name="top">Table of Contents</a>
 1. [Introduction](#1)  
@@ -40,9 +41,12 @@ ___
 7. [Conclusion and Next Steps](#conclusion)  
 8. [References](#refs)     
 
-___
-[go back to top](#top)
-___
+___  
+
+[go back to top](#top)  
+
+___  
+
 ## <a name="introduction" id="1">1.0 Introduction</a>
 
 ### <a name="objective" id="11">1.1 Objective</a>
@@ -106,9 +110,12 @@ sns.set_style('whitegrid')
 np.random.seed(42)
 ```
 
-___
+___  
+
 [go back to top](#top)
-___
+
+___  
+
 ## <a name="exploratory">2.0 Exploratory Data Analysis </a>
 
 ### <a name="loaddata">2.1 Load Market Data </a>
@@ -3776,9 +3783,12 @@ print(f"Dimension of the processed market dataset: {array_df_final.shape}")
     Dimension of the processed market dataset: (462298, 190)
     
 
-___
+___  
+
 [go back to top](#top)  
-___
+
+___  
+  
 ## <a name="overview">3 Algorithm Evaluation and Overview of the Steps to be Taken</a>
 
 ### <a name="typesrecsys">3.1 Types of Recommender Systems</a>
@@ -3814,9 +3824,12 @@ It can be argued that it's a matter of adapting the dataset so that we obtain th
 
 * As seen in the previous exploratory data analysis section, each client presents several features that may be used to identify similar observations/clients.  
 
-___
+___  
+
 [go back to top](#top)  
-___
+
+___  
+
 ## <a name="training">4 Model Training</a>
 ### <a name="portfoliodata">4.1 Load Portfolio Data</a>
 
@@ -4382,9 +4395,12 @@ train_output = train_classifiers(portfolio=portfolio2, companies_profile=compani
     Wall time: 9min 54s
     
 
-___
+___  
+
 [go back to top](#top)  
-___
+
+___  
+
 ## <a name="performance">5 Model Performance</a>  
 
 ### <a name="lrmetrics">5.1 Logistic Regression Metrics</a>
@@ -4676,9 +4692,12 @@ mapk_df
 
 **The mean average precision is highest at top 3 and goes down as the threshold increases - we're indeed recommeding better Leads at the beggining of the list, mainly for the top 3, 5 and 10 recommendations!**
 
-___
+___  
+
 [go back to top](#top)  
-___
+
+___  
+  
 ## <a name="results">6 Visualizing Results</a>  
 
 ### <a name="newrecs">6.1 Making New Recommendations for Portfolio 2</a>
@@ -5401,9 +5420,12 @@ create_barplots(recommended_dataset, object_features, n_labels=10)
 ![png](output_147_0.png)
 
 
-___
+___  
+
 [go back to top](#top)  
-___
+  
+___  
+
 ## <a name="conclusion">7 Conclusion and Next Steps</a>
 The main objective was to develop Leads for companies based on their portfolios, and it has been accomplished. The next step is to develop a web-app of sorts to automate this process, e.g. to turn it user friendly. This project taught me a lot, and it gives insights on how to use many machine learning techniques.  
 The problem stated that new leads should be generated, so classic recommender systems were the first approach that came to mind. It was not until later in the project that fellow colleagues and students gave me insight on reframing the problem - hence, I ended up applying logistic regression, a simpler ML technique, in conjunction to what I already had in mind, to create this recommender system's skeleton! This also taught me that correctly framing your problem is very important at early stages of the project.  
@@ -5426,9 +5448,12 @@ Next steps:
 * Learn more about Object Oriented Programming.  
 * Learn more about cloud techonologies.  
 
-___
+___  
+
 [go back to top](#top)  
-___
+
+___  
+  
 ## <a name="refs">8 References</a>
 
 Most references are about classic recommender systems, which I actually did not use step by step, but the insights were very helpful.
@@ -5453,10 +5478,14 @@ Most references are about classic recommender systems, which I actually did not 
 [Dive into Deep Learning](http://d2l.ai/chapter_recommender-systems/index.html)  
 [SMOTE for Imbalanced Classification with Python](https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/)
 
-___
+___  
+  
 ### 9 THANK YOU FOR READING!   
 Do you have any insights on how solve this differently or wish to know more?  
 Message me @ [GitHub](https://github.com/Key0412) | [LinkedIn](https://www.linkedin.com/in/klismam-pereira/)
-___
-#### [Go back to top](#top)[, one more time](https://www.youtube.com/watch?v=FGBhQbmPwH8)
-___
+  
+___  
+
+#### [Go back to top](#top)[, one more time](https://www.youtube.com/watch?v=FGBhQbmPwH8)  
+  
+___  
