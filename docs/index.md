@@ -54,7 +54,7 @@ ___
 
 This project's objective is to provide an automated service that recommends new business leads to a user given his current clients portfolio. A high level video explanation of the analysis in portuguese is available on youtube, link in the image.
 
-[![Recommender System to Generate Leads based on Clients' Portfolio video, Miniature Photo by Jamie Street on Unsplash](../docs/video_thumbnail.png)](https://www.youtube.com/watch?v=mPy3HNEKsns&feature=youtu.be "Recommender System to Generate Leads based on Clients' Portfolio video, Miniature Photo by Jamie Street on Unsplash")
+[![Recommender System to Generate Leads based on Clients' Portfolio video, Miniature Photo by Jamie Street on Unsplash](video_thumbnail.png)](https://www.youtube.com/watch?v=mPy3HNEKsns&feature=youtu.be "Recommender System to Generate Leads based on Clients' Portfolio video, Miniature Photo by Jamie Street on Unsplash")
 
 ### <a name="requirements">1.2 Technical Requirements</a>
 
