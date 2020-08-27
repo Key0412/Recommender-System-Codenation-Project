@@ -4085,11 +4085,12 @@ We'll save the companies profile table with the principal components in a .zip f
 
 ```python
 # %%time
-# compression_opts = dict(method="zip", archive_name="companies_profile.csv")
-# companies_profile.to_csv(path_or_buf="../output/companies_profile.zip", compression=compression_opts)
+# split_size = 11
+# for idx, df_i in enumerate(np.array_split(companies_profile, split_size)):
+#     df_i.to_csv(path_or_buf=f"../output/companies_profile_{idx}.csv", float_format=np.float32)
 ```
 
-    Wall time: 7min 45s
+    Wall time: 1min 20s
     
 
 ### <a name="cluster">4.3 Clustering Companies with MiniBatchKMeans</a>
