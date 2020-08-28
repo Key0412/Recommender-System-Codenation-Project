@@ -1,5 +1,9 @@
-import pandas as pd
+# Standard library imports
 from zipfile import ZipFile
+
+# Related third party imports
+import pandas as pd
+
 
 class ReadFiles():
     """
@@ -25,10 +29,8 @@ class ReadFiles():
         :return tuple:
             - pos 0: Pandas DataFrame, contains all the companies' IDs as index.
             - pos 1: Pandas DataFrame, contains numbers from 0 to max number of clusters. Maps each company to a cluster.
-            - pos 2: Pandas Dataframe, contains clients IDs for portfolio 1.
-            - pos 3: Pandas Dataframe, contains clients IDs for portfolio 2.
-            - pos 4: Pandas Dataframe, contains clients IDs for portfolio 3.
-            - pos 5: Pandas Dataframe, contains all the companies ids and some of their original features: id, de_natureza_juridica, sg_uf, de_ramo setor, idade_emp_cat, de_nivel_atividade, de_faixa_faturamento_estimado.
+            - pos 3: Pandas Dataframe, contains all the companies ids and some of their original features: id, de_natureza_juridica, sg_uf, de_ramo setor, idade_emp_cat, de_nivel_atividade, de_faixa_faturamento_estimado.
+            - pos 4: Pandas Dataframe, contains a snippet with clients IDs for portfolio 2.
             
         """
         # Main Dataset
@@ -41,10 +43,8 @@ class ReadFiles():
         cluster_labels = pd.read_csv(self._output_path + "cluster_labels.zip", compression="zip", index_col=0)   
         
         # Portfolios
-        portfolio1 = pd.read_csv(self._data_path + "estaticos_portfolio1.csv", usecols=["id"])
-        portfolio2 = pd.read_csv(self._data_path + "estaticos_portfolio2.csv", usecols=["id"])
-        portfolio3 = pd.read_csv(self._data_path + "estaticos_portfolio3.csv", usecols=["id"])
-        
+        portfolio2_snippet = pd.read_csv(self._data_path + "estaticos_portfolio2.csv", usecols=["id"])
+            
         # Important features from the original dataset, used for visualization/context
         try:
             with ZipFile(self._data_path + "estaticos_market.csv.zip").open("estaticos_market.csv") as original_dataset:
@@ -52,4 +52,4 @@ class ReadFiles():
         except:
             raise Exception("Are the features chosen available in the original dataset?")
             
-        return database, cluster_labels, portfolio1, portfolio2, portfolio3, original_market_df
+        return database, cluster_labels, original_market_df, portfolio2_snippet

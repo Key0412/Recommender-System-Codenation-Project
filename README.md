@@ -15,7 +15,7 @@ For this project, a ***Content Based Filtering Recommender System* based in *Log
 
 ### <a name="approach">3 Selected Approach and Steps</a>
 
-After experimentation, research and input from felow students and the community, **For this project, a Content Based Filtering Recommender System based in *Logistic Regression* is going to be used**. It's not quite a recommender system per se ([at least not like the ones I found](#refs)), e.g. it does not uses technologies as TF-IDF, Matrix Factorization, similarity comparison through euclidean/cosine distances, but it does recommend leads!  
+After experimentation, research and input from felow students and the community, **For this project, a Content Based Filtering Recommender System based in *Logistic Regression* is going to be used**. It's not quite a recommender system per se ([at least not like the ones I found](https://key0412.github.io/Recommender-System-Codenation-Project/#refs)), e.g. it does not uses technologies as TF-IDF, Matrix Factorization, similarity comparison through euclidean/cosine distances, but it does recommend leads!  
 The steps taken, overall, are:  
 * The companies that are already clients can be used as targets provided they're encoded as 0s and 1s, or False and True.  
 * The processed database can be used as predictors.  
@@ -42,6 +42,6 @@ Ordered recommendations : [False, True, True, True, True, True, True, True, True
 ___  
 
 #### [Youtube video with high level explanation - PTBR](https://www.youtube.com/watch?v=mPy3HNEKsns&feature=youtu.be)
-[![Recommender System to Generate Leads based on Clients' Portfolio video](docs/video_thumbnail.png)](https://www.youtube.com/watch?v=mPy3HNEKsns&feature=youtu.be "Recommender System to Generate Leads based on Clients' Portfolio video")  
+[![Recommender System to Generate Leads based on Clients' Portfolio video, Miniature Photo by Jamie Street on Unsplash](video_thumbnail.png)](https://www.youtube.com/watch?v=mPy3HNEKsns&feature=youtu.be "Recommender System to Generate Leads based on Clients' Portfolio video, Miniature Photo by Jamie Street on Unsplash")  
 
 ___  

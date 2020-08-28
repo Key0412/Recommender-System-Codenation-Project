@@ -1,6 +1,8 @@
+# Related third party imports
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+
 
 class VisualizeLeads():
     """
@@ -19,10 +21,10 @@ If not defined, the features id, de_natureza_juridica, sg_uf, de_ramo, setor, id
         # Important features from the original dataset, used for visualization/context
         if report_features == None:
             self.report_features = "de_natureza_juridica sg_uf de_ramo setor idade_emp_cat de_faixa_faturamento_estimado".split()
-            print(f"Features retrieved from original dataframe: {self.report_features}")
+            print(f"Features to visualize from original dataframe: {self.report_features}")
         else:
             self.report_features = report_features
-            print(f"Features retrieved from original dataframe: {self.report_features}")
+            print(f"Features to visualize from original dataframe: {self.report_features}")
         
         try:
             self.df = original_market_df.loc[self.ids, self.report_features]
@@ -42,29 +44,22 @@ If not defined, the features id, de_natureza_juridica, sg_uf, de_ramo, setor, id
             plt.xlabel(self.report_features[0])
         else:
             n_figures = len(self.report_features) - 1
-            nrows = len(self.report_features)//2
-            ncols = 2
-            if len(self.report_features) % 2 != 0:
-                nrows += 1
-            fig, axs = plt.subplots(nrows=nrows, ncols=ncols, figsize=(20, nrows*8))
-            plt.subplots_adjust(wspace=0.6)
+            nrows = len(self.report_features)
+            ncols = 1
+            fig, axs = plt.subplots(nrows=nrows, ncols=ncols, figsize=(20, nrows*12))
+            plt.subplots_adjust(hspace=0.4)
 
             flag = 0
             while flag <= n_figures:
-                for pos_row in range(nrows):
-                    for pos_col in range(ncols):
-                        if nrows == 1:
-                            ax = axs[pos_col]
-                        else:
-                            ax = axs[pos_row, pos_col]
-                        if (len(self.report_features)%2 != 0) and (pos_row == nrows-1) and (pos_col == 1):
-                            flag+=1
-                            continue
-                        x = self.df[self.report_features[flag]].value_counts().head(n_labels)
-                        y = x.index
-                        sns.barplot(x=x, y=y, ax=ax)
-                        plt.xlabel(self.report_features[flag])
-                        flag+=1                    
+                for pos_row in range(0, nrows):
+                    ax = axs[pos_row]
+                    x = self.df[self.report_features[flag]].value_counts().head(n_labels)
+                    y = x.index
+                    sns.barplot(x=x, y=y, ax=ax, palette="plasma")
+                    ax.set_xlabel("")
+                    ax.tick_params(labelsize=25)
+                    ax.set_title(self.report_features[flag], fontsize=25, pad=12, fontweight='bold')
+                    flag+=1                    
                         
     def create_table(self):
         """
@@ -73,5 +68,5 @@ If not defined, the features id, de_natureza_juridica, sg_uf, de_ramo, setor, id
         """
         n_recommendations = self.df.shape[0] 
         ranks = pd.Series([int(rank) for rank in range(1, n_recommendations + 1)], name="Ranking")
-        ranked_table = pd.concat([ranks, self.df.reset_index()], axis=1).set_index("Ranking")
+        ranked_table = pd.concat([ranks, self.df.reset_index()], axis=1)
         return ranked_table

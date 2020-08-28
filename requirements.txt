@@ -68,7 +68,6 @@ pyzmq==19.0.2
 requests==2.24.0
 s3transfer==0.3.3
 scikit-learn==0.23.2
-scikit-surprise==1.1.1
 scipy==1.5.2
 seaborn==0.10.1
 Send2Trash==1.5.0
