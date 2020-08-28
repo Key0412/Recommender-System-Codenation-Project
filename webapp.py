@@ -14,10 +14,10 @@ import seaborn as sns
 import streamlit as st
 
 # Local application
-from ReadFiles import ReadFiles
-from LinearRegressionRecSys import LinearRegressionRecSys
-from VisualizeLeads import VisualizeLeads
-from GetDownloadLink import get_csv_download_link
+from src.ReadFiles import ReadFiles
+from src.LinearRegressionRecSys import LinearRegressionRecSys
+from src.VisualizeLeads import VisualizeLeads
+from src.GetDownloadLink import get_csv_download_link
 
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
@@ -32,7 +32,7 @@ database, cluster_labels, original_market_df, portfolio2_snippet = reader()
 
 # -- MAIN --
 def main():
-    st.image("../docs/header_photo.jpg", caption="Person holding a compass. Photo by Jamie Street on Unsplash.", use_column_width=True)
+    st.image("docs/header_photo.jpg", caption="Person holding a compass. Photo by Jamie Street on Unsplash.", use_column_width=True)
     
     # Title
     st.title("WebApp Leads Finder")
@@ -55,8 +55,7 @@ def main():
     
     # Recomendações
     st.header("Recomendações")
-
-    # Add file uploader:
+    # File uploader:
     uploaded_portfolio = st.file_uploader("Envie seu portfolio de clientes (.csv):", type="csv")
         
     if uploaded_portfolio is not None:

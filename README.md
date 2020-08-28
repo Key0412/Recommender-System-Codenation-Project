@@ -33,7 +33,7 @@ MAP@K metrics for k=5, 10, 25 and 50:
 **Notes on Results for Portfolio 2**
 * The MAP@5 metric means we're getting the first value wrong, while the remaining 4 values were indeed already clients.
 * The MAP@10 metric means we're getting way more recommendations that were already of interest in this interval, in fact, we're missing out only the first item. See the list comparation below, it confirms the last sentence.  
-`For the ten first recommendations, are they of interest (e.g. already clients)? 
+`For the ten first recommendations, are they of interest (e.g. already clients)?  
 Ordered recommendations : [False, True, True, True, True, True, True, True, True, True]`  
 * The MAP@25 and MAP@50 metrics seem consistent, and even with 50 recommendations, we can present good recommendations. From the first 25 and 50 recommendations, 19 and 34 were already clients, respectivelly.
 

@@ -84,7 +84,7 @@ Predictor is a dataframe with all companies features' for each cluster, target i
 
             print(f"Cluster size: {self._cluster_df.shape[0]}")
             print(f"Clients in cluster: {self._target.sum()}")
-            print(f"Clients per cluster ratio: {round(100*(self._target.sum()/self._cluster_df.shape[0]), 3)} % \n")
+            print(f"Clients per cluster ratio: {round(100*(self._target.sum() / self._cluster_df.shape[0]), 3)} % \n")
 
             print("Processing:\n")
 

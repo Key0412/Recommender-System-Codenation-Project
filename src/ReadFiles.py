@@ -14,8 +14,8 @@ class ReadFiles():
         Define paths to files and features to be retrieved from 'original market dataframe' (estaticos_market.csv).
         :param report_features: list of strings, default=None, has to contain names of features to be retrieved from the original dataframe (e.g. not processed. See more about this in the projects' GitHub page or in the main.ipynb notebook). If not defined, the features id, de_natureza_juridica, sg_uf, de_ramo, setor, idade_emp_cat, de_nivel_atividade, and de_faixa_faturamento_estimado are retrieved.
         """
-        self._output_path = "../output/"
-        self._data_path = "../data/"
+        self._output_path = "output/"
+        self._data_path = "data/"
         if report_features == None:
             self.report_features = "de_natureza_juridica sg_uf de_ramo setor idade_emp_cat de_faixa_faturamento_estimado".split()
             print(f"Features retrieved from original dataframe: {self.report_features}")
