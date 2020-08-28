@@ -36,8 +36,8 @@ class ReadFiles():
         # Main Dataset
         dataset_files = []
         for file_idx in range(11):
-            dataset_files.append(pd.read_csv(self._output_path + f"companies_profile_{file_idx}.csv"))     
-        database = pd.concat(dataset_files, axis=0, ignore_index=True).set_index("id")     
+            dataset_files.append(pd.read_csv(self._output_path + f"companies_profile_{file_idx}.zip", compression="zip"))     
+        database = pd.concat(dataset_files, axis=0, ignore_index=True).set_index("id")
         
         # Cluster labels
         cluster_labels = pd.read_csv(self._output_path + "cluster_labels.zip", compression="zip", index_col=0)   
