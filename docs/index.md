@@ -4087,7 +4087,8 @@ We'll save the companies profile table with the principal components in a .zip f
 # %%time
 # split_size = 11
 # for idx, df_i in enumerate(np.array_split(companies_profile, split_size)):
-#     df_i.to_csv(path_or_buf=f"../output/companies_profile_{idx}.csv", float_format=np.float32)
+#     compression_opts = dict(method="zip", archive_name=f"companies_profile_{idx}.csv")
+#     df_i.to_csv(path_or_buf=f"../output/companies_profile_{idx}.zip", float_format=np.float32, compression=compression_opts)
 ```
 
     Wall time: 1min 20s
