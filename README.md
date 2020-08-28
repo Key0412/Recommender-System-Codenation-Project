@@ -42,6 +42,6 @@ Ordered recommendations : [False, True, True, True, True, True, True, True, True
 ___  
 
 #### [Youtube video with high level explanation - PTBR](https://www.youtube.com/watch?v=mPy3HNEKsns&feature=youtu.be)
-[![Recommender System to Generate Leads based on Clients' Portfolio video, Miniature Photo by Jamie Street on Unsplash](video_thumbnail.png)](https://www.youtube.com/watch?v=mPy3HNEKsns&feature=youtu.be "Recommender System to Generate Leads based on Clients' Portfolio video, Miniature Photo by Jamie Street on Unsplash")  
+[![Recommender System to Generate Leads based on Clients' Portfolio video, Miniature Photo by Jamie Street on Unsplash](docs/video_thumbnail.png)](https://www.youtube.com/watch?v=mPy3HNEKsns&feature=youtu.be "Recommender System to Generate Leads based on Clients' Portfolio video, Miniature Photo by Jamie Street on Unsplash")  
 
 ___  
