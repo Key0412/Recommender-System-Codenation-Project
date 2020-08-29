@@ -23,7 +23,7 @@ from src.GetDownloadLink import get_csv_download_link
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
 # -- READ FILES --
-@st.cache(show_spinner=False, persist=True)
+@st.cache(show_spinner=False)
 def reader():
     file_reader = ReadFiles()
     database, cluster_labels, original_market_df, portfolio2_snippet = file_reader.get_data()
