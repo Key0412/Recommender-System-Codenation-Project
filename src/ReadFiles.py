@@ -17,7 +17,7 @@ class ReadFiles():
         self._output_path = "output/"
         self._data_path = "data/"
         if report_features == None:
-            self.report_features = "de_natureza_juridica sg_uf de_ramo setor idade_emp_cat de_faixa_faturamento_estimado".split()
+            self.report_features = "sg_uf de_ramo idade_emp_cat de_faixa_faturamento_estimado".split()
             print(f"Features retrieved from original dataframe: {self.report_features}")
         else:
             self.report_features = report_features
