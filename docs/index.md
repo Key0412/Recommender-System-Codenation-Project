@@ -52,7 +52,7 @@ ___
 
 ### <a name="objective" id="11">1.1 Objective</a>
 
-This project's objective is to provide an automated service that recommends new business leads to a user given his current clients portfolio. A high level video explanation of the analysis in portuguese is available on youtube, link in the image.
+This project's objective is to provide an automated service that recommends new business leads to a user given his current clients portfolio. Check out the deployed [**WebApp Leads Finder**](https://leads-finder-recsys.herokuapp.com/) and a high level video explanation of the analysis in portuguese is available on [youtube](https://www.youtube.com/watch?v=mPy3HNEKsns&feature=youtu.be "Recommender System to Generate Leads based on Clients' Portfolio video, Miniature Photo by Jamie Street on Unsplash"), link in the image.
 
 [![Recommender System to Generate Leads based on Clients' Portfolio video, Miniature Photo by Jamie Street on Unsplash](video_thumbnail.png)](https://www.youtube.com/watch?v=mPy3HNEKsns&feature=youtu.be "Recommender System to Generate Leads based on Clients' Portfolio video, Miniature Photo by Jamie Street on Unsplash")
 
@@ -4154,9 +4154,9 @@ We'll save the cluster labels vector in a .zip file to use it later in the webap
 
 
 ```python
-%%time
-compression_opts = dict(method="zip", archive_name="cluster_labels.csv")
-cluster_labels.to_csv(path_or_buf="../output/cluster_labels.zip", compression=compression_opts)
+# %%time
+# compression_opts = dict(method="zip", archive_name="cluster_labels.csv")
+# cluster_labels.to_csv(path_or_buf="../output/cluster_labels.zip", compression=compression_opts)
 ```
 
     Wall time: 4.28 s
@@ -5478,8 +5478,11 @@ ___
   
 ## <a name="conclusion">7 Conclusion and Next Steps</a>  
 
-The main objective was to recommend leads/new clients for companies based on their portfolios. The resulting model showed satisfactory metrics, and the recommendations for portfolio 2 presented interesting insights on it's preferred clients' characteristics. The next step is to develop a web-app of sorts to automate this process, e.g. to turn it user friendly. This project taught me a lot, and it gives insights on how to use many machine learning techniques.  
+The main objective was to recommend leads/new clients for companies based on their portfolios. The resulting model showed satisfactory metrics, and the recommendations for portfolio 2 presented interesting insights on it's preferred clients' characteristics. This project taught me a lot, and it gives insights on how to use many machine learning techniques.  
 The problem stated that new leads should be generated, so classic recommender systems were the first approach that came to mind. It was not until later in the project that fellow colleagues and students gave me insight on reframing the problem - hence, I ended up applying logistic regression, a simpler ML technique, in conjunction to what I already had in mind, to create this recommender system's skeleton! This also taught me that correctly framing your problem is very important at early stages of the project.  
+Finally, the WebApp Leads Finder was deployed with a sample from the original data. It returns 50 recommendations and their main characteristics based on the uploaded portfolio. [**Give the WebApp a try!**](https://leads-finder-recsys.herokuapp.com/)
+
+
 
 In summary:  
 * Sometimes (if not always) simpler is better!  
@@ -5491,12 +5494,10 @@ What could be better:
 * A better/more profound early analysis of the dataset could have spared me a lot of time and RAM. I still think that many of the features used in the training weren't as necessary.  
 * The number of Principal Components used in the logistic regression training is still quite high!  
     * The last point is one of the reasons I did not present the analysis of portfolio 1 and 3, but feel free to try the code laid here!
-* I'm feeling that the use of Object Oriented Programming would help me a lot in this project, and I intent to fill this gap.  
+* I'm feeling that the use of Object Oriented Programming would help me a lot in this project, and I intent to fill this gap. I actually used OOP during the app deployment!
 * Also, my notebook couldn't handle some of my experiments, so maybe I also should learn about cloud technologies (as noted in the fourth point just above).  
 
 Next steps:  
-* Create a web-app to turn this skeleton of a system into a user friendly platform.  
-* Learn more about Object Oriented Programming.  
 * Learn more about cloud techonologies.  
 
 ___  
