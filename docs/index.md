@@ -4080,15 +4080,14 @@ companies_profile.head()
 
 
 
-We'll save the companies profile table with the principal components in a .zip file to use it later in the webapp.
+We'll save the companies profile table with the principal components in a .zip file to use it later in the webapp. We're using float as "float16", which implies loosing some information, but it is needed so that the webapp can be deployed later.
 
 
 ```python
 # %%time
-# split_size = 11
+# split_size = 8
 # for idx, df_i in enumerate(np.array_split(companies_profile, split_size)):
-#     compression_opts = dict(method="zip", archive_name=f"companies_profile_{idx}.csv")
-#     df_i.to_csv(path_or_buf=f"../output/companies_profile_{idx}.zip", float_format=np.float32, compression=compression_opts)
+#     df_i.to_csv(path_or_buf=f"../output/companies_profile_{idx}.bz2", float_format=np.float16, compression="bz2")
 ```
 
     Wall time: 1min 20s
