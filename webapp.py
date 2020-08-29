@@ -83,7 +83,7 @@ def main():
     st.header("Autor")
     st.markdown("Este WebApp foi criado em Python por **Klismam** Franciosi Pereira, estudante e entusiasta do campo de ciência de dados e engenheiro formado pela UFPR.")
     st.markdown("Entenda todo o processo e análise de dados na [página do projeto](https://key0412.github.io/Recommender-System-Codenation-Project/) e veja o [vídeo com uma explicação sobre as ideias por trás do sistema](https://www.youtube.com/watch?v=mPy3HNEKsns&feature=youtu.be).")
-    st.markdown("Se tiver ideias de como melhorar este WebApp, se quiser criar um você mesmo, ou se tem uma ideia legal pra discutir, entre em contato!")
+    st.markdown("Pensou como melhorar este WebApp, quer criar um você mesmo, ou tem ideia legal pra discutir? Entre em contato!")
     st.subheader("Contatos")
     st.markdown("[LinkedIn](https://www.linkedin.com/in/klismam-pereira/) | [Github](https://github.com/Key0412) | kp.franciosi@gmail.com")
     
