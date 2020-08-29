@@ -27,15 +27,15 @@ class VisualizeLeads():
         if len(self.report_features) == 1:
             x = original_market_df.loc[self.ids].value_counts().head(n_labels)
             y = x.index        
-            plt.figure(figsize = (20, 10))
+            plt.figure(figsize = (4, 3))
             sns.barplot(x = x, y = y)
             plt.xlabel(self.report_features[0])
         else:
             n_figures = len(self.report_features) - 1
             nrows = len(self.report_features)
             ncols = 1
-            fig, axs = plt.subplots(nrows=nrows, ncols=ncols, figsize=(20, nrows*12)) ## ###
-            plt.subplots_adjust(hspace=0.4)
+            fig, axs = plt.subplots(nrows=nrows, ncols=ncols, figsize=(4, nrows*3)) ## ###
+            plt.subplots_adjust(hspace=0.3)
 
             flag = 0
             while flag <= n_figures:
@@ -45,8 +45,8 @@ class VisualizeLeads():
                     y = x.index
                     sns.barplot(x=x, y=y, ax=ax, palette="plasma")
                     ax.set_xlabel("")
-                    ax.tick_params(labelsize=25)
-                    ax.set_title(self.report_features[flag], fontsize=25, pad=12, fontweight='bold')
+                    ax.tick_params(labelsize=8)
+                    ax.set_title(self.report_features[flag], fontsize=10, fontweight='bold')
                     flag+=1                    
                         
     def create_table(self, original_market_df):

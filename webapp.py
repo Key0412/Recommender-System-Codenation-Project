@@ -61,6 +61,7 @@ def main():
     uploaded_portfolio = st.file_uploader("Envie seu portfolio de clientes (.csv):", type="csv")
         
     if uploaded_portfolio is not None:
+        plt.close("all")
         portfolio = pd.read_csv(uploaded_portfolio, usecols=["id"]) # read portfolio from updloaded file into a pandas df
         recsys = LinearRegressionRecSys(portfolio, database, cluster_labels) # create recsys object from portfolio dat
         with st.spinner('Treinando o modelo . . .'):
@@ -72,8 +73,8 @@ def main():
         st.dataframe(ranked_table)
         st.markdown(get_csv_download_link(ranked_table), unsafe_allow_html=True) # Get download link for created table
         st.subheader("Quais suas características principais?")
-        visualizer.create_barplots(original_market_df) # call method create_barplots() to plot features
-        st.pyplot()        
+        st.pyplot(visualizer.create_barplots(original_market_df))  # call method create_barplots() to plot features
+              
     else:
         st.warning("**Oops! O portfolio não foi enviado!**")    
     st.markdown("___")
