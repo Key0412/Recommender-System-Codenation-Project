@@ -51,6 +51,8 @@ def main():
     st.table(portfolio2_snippet.head(5))
     st.markdown("Caso deseje, você pode utilizar os portfolios exemplo disponíveis no link a seguir:")
     st.markdown("* [Acesse Porfolios Exemplo!](https://drive.google.com/drive/folders/1116lPSHfyPG2x5Z7VVv4ErAhhaX3pVMG?usp=sharing)")   
+    st.markdown("Ou, pode obter uma amostra do dataset utilizado neste webapp:")
+    st.markdown("* [Acesse a base de dados!](https://drive.google.com/drive/folders/1oVijJs-jOGJhbqNvMHxdTWpQyw8Dc860?usp=sharing)")  
     st.markdown("___")
     
     # Recomendações

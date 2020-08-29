@@ -1,0 +1,11 @@
+# Files to ignore
+estaticos_market.csv.zip
+cluster_labels.zip
+lr_metrics.csv
+mapk_metrics_portfolio2.csv
+_config.yml
+*.ipynb
+*.bz2
+*.pdf
+*.md
+*.png

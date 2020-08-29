@@ -90,11 +90,12 @@ This project's objective is to provide an automated service that recommends new 
 
 
 ```python
+from zipfile import ZipFile
+
 import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
-from zipfile import ZipFile
 from imblearn.over_sampling import SMOTE
 from ml_metrics import mapk
 from sklearn.preprocessing import OneHotEncoder, LabelEncoder, Normalizer, QuantileTransformer
