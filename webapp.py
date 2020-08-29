@@ -66,13 +66,13 @@ def main():
         with st.spinner('Treinando o modelo . . .'):
             recommendations = recsys.train_recommend(n_recommendations=50) # train models and recommend 50 leads
         st.success('Treinamento completo!')        
-        visualizer = VisualizeLeads(recommendations["id"], original_market_df) # instantiate VisualizeLeads
+        visualizer = VisualizeLeads(recommendations["id"]) # instantiate VisualizeLeads
         st.subheader("Quem são seus novos clientes?")
-        ranked_table = visualizer.create_table() # call method create_table()
+        ranked_table = visualizer.create_table(original_market_df) # call method create_table()
         st.dataframe(ranked_table)
         st.markdown(get_csv_download_link(ranked_table), unsafe_allow_html=True) # Get download link for created table
         st.subheader("Quais suas características principais?")
-        visualizer.create_barplots() # call method create_barplots() to plot features
+        visualizer.create_barplots(original_market_df) # call method create_barplots() to plot features
         st.pyplot()        
     else:
         st.warning("**Oops! O portfolio não foi enviado!**")    

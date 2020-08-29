@@ -5,9 +5,11 @@ from imblearn.over_sampling import SMOTE
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, roc_auc_score
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 
-class LinearRegressionRecSys():
+class LinearRegressionRecSys(object):
     """
     Class used to train logistic regression model in each defined cluster and to provide recommendations.
     """
