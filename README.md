@@ -47,7 +47,7 @@ Ordered recommendations : [False, True, True, True, True, True, True, True, True
 
 ### [5 Deployment - Leads Finder Webapp](https://leads-finder-recsys.herokuapp.com)
 
-Since the original and the processed datasets sizes' were on the magnitude of gigabytes, it was necessary to get a smaller sample to make deployment viable. The notebook "src/getting_webapp_samples.ipynb" contains the code used to separate a sample with 15 times the number of companies from the portfolios, plus these clients. Also, the file .slugignore was used to select which archives should be ignored during deployment.
+Since the original and the processed datasets sizes' were on the magnitude of gigabytes, it was necessary to get a smaller sample to make deployment viable. The notebook "src/getting_webapp_samples.ipynb" contains the code used to separate a sample with 25 times the number of companies from the portfolios, plus these clients. Also, the file .slugignore was used to select which archives should be ignored during deployment.
 For this webapp, I experimented with Object Oriented Programming. The main script is `webapp.py`, and the classes/functions created to work with it are in the folder `src`. Access the demo webapp here!](https://leads-finder-recsys.herokuapp.com/)
 
 ___  
